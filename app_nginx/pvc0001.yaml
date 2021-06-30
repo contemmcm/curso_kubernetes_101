@@ -1,0 +1,14 @@
+# pvc0001.yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pv0001-claim
+  labels:
+    app: nginx
+spec:
+  storageClassName: slow
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 500Mi
