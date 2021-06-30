@@ -1,0 +1,11 @@
+# configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-configmap
+data:
+  config.properties: |
+    autenticacao=BD
+    lai/horarioDesclassificacao=0 0 0 * * ?
+    indices/horarioRecriacao=0 53 10 ? * 2
+    certificados/horarioObtencao=0 0 0 * * ?

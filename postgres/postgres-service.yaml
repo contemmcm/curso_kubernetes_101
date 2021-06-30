@@ -1,0 +1,16 @@
+# postgres-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-service
+  labels:
+    app: postgres
+  annotations:
+    metallb.universe.tf/address-pool: default
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 5432
+      port: 5432
+  selector:
+    app: postgres

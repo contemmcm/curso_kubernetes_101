@@ -1,0 +1,14 @@
+# pv0001.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv0001
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: slow
+  nfs:
+    path: /k8s-storage/pv0001
+    server: 192.168.15.19
